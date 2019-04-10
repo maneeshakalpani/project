@@ -37,13 +37,12 @@ export default class EditTodo extends Component{
                     </div>
 
                     <img class="imgclass" src={logo} alt="Logo" />
-                    <h1 align="center">AboutUs</h1>
+                    <h1 align="center"> Contact Us</h1>
+                    <p align="center"><b>Email:LankaGuide@gmail.com</b></p>
+                    <p align="center"><b>Hot Line 0199</b></p>
+                    <p align="center"><b>LankaGuide</b></p>
 
-                    <p>
-                        The Website is designed in such a way that it is user friendly and is updated with all the latest statistics regarding the country. SriLanka T&T brings Sri Lanka and its famous places for sightseeing right to the tip of your fingers not only you will be very familiar with the country even before you visit it but you will be able to plan your itinerary in advance using the resources provided by the website itself. The website gives all the latest pictures and data about places and in the meantime provides helpful hints as to how to spend quality time in Sri Lanka .</p>
-
-
-                    <Route path="/" exact component={Register}/>
+                        <Route path="/" exact component={Register}/>
                     <Route path="/create" exact component={Login}/>
                 </div>
             </Router>

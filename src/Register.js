@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
+import {BrowserRouter as Router,Route,Link} from "react-router-dom";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./App.css"
-import EditTodo from"./todos-list.component";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import  React1 from 'react';
 
@@ -16,7 +16,7 @@ const formvalid=formErrors=>{
 const emailRegex=RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/);
 
 
-export default class CreateTodo extends Component {
+export default class Register extends Component {
     constructor(props) {
 
         super(props);
@@ -86,69 +86,91 @@ export default class CreateTodo extends Component {
         return (
 
 
-            <form className="regbody" onSubmit={this.handleSubmit} noValidate>
-                <div className="myname">
 
 
-                    <label>username </label>
+            <div>
 
-
-                    <input
-                        className={formErrors.username.length > 0 ? "error" : null}
-                        type="text" name="username" placeholder="Username"
-                        type="text"
-                        noValidate
-                        onChange={this.handleChange}
-
-                    />
-                    {formErrors.username.length > 0 && (<span className="errorMessage">{formErrors.username} </span>)}
-
-
-                    <br/>
-
-                    <label>Password </label>
-
-                    <input
-                        className={formErrors.password.length > 0 ? "error" : null}
-                        type="password" name="password" placeholder="Password" //value={this.state.password}
-                        noValidate
-                        onChange={this.handleChange}
-                        /*     {formErrors.password.length > 0 && (
-                                 <span className="errorMessage">{formErrors.username} </span>)}*/
-
-                    />
-                    <br/><br/>
-
-                    <label>Email </label>
-
-
-                    <input
-                        className={formErrors.email.length > 0 ? "error" : null}
-                        type="text" name="username" placeholder="Username"
-                        type="text"
-                        noValidate
-                        onChange={this.handleChange}
-
-                    />
-                    {formErrors.email.length > 0 && (<span className="errorMessage">{formErrors.email} </span>)}
-                <br/><br/>
-
-                    <button type="button" className="LoginButton">Login</button>
-
-                    <button type="submit" className="LoginButton">Register</button>
-
+                <div className="heading1">
+                    <h1>LankaGuide
+                        <button className="btn">Login</button>
+                        <button className="btn2">Register</button>
+                    </h1>
 
                 </div>
-            </form>
 
+                <div>
+
+                </div>
+
+                <div className="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li>< a href="#me">ContactUs</a></li>
+                        <li><a href="#contact">AboutUs</a></li>
+                        <li><a href="#about">Services</a></li>
+                    </ul>
+
+                </div>
+
+                <form className="regbody" onSubmit={this.handleSubmit} noValidate >
+                    <div className="myname">
+
+
+                        <label>Username </label>
+
+
+                        <input
+                            className={formErrors.email.length > 0 ? "error" : null}
+                            type="text" name="username" placeholder="Username"
+                            type="text"
+                            noValidate
+                            onChange={this.handleChange}
+
+                        />
+                        {formErrors.email.length > 0 && (<span className="errorMessage">{formErrors.email} </span>)}
+
+                        <br/>
+
+                        <label>Password </label>
+
+                        <input
+                            className={formErrors.password.length > 0 ? "error" : null}
+                            type="password" name="password" placeholder="Password" //value={this.state.password}
+                            noValidate
+                            onChange={this.handleChange}
+                            /*     {formErrors.password.length > 0 && (
+                                     <span className="errorMessage">{formErrors.username} </span>)}*/
+
+                        />
+                        <br/><br/>
+
+                        <label>Email </label>
+
+
+                        <input
+                            className={formErrors.email.length > 0 ? "error" : null}
+                            type="text" name="email" placeholder="Username"
+                            type="text"
+                            noValidate
+                            onChange={this.handleChange}
+
+                        />
+                        {formErrors.email.length > 0 && (<span className="errorMessage">{formErrors.email} </span>)}
+
+
+
+
+
+
+
+                        <button type="submit" className="registerbtn">Register</button>
+
+
+                    </div>
+                </form>
+            </div>
 
         );
     }
 }
-
-
-
-
-
-
 
